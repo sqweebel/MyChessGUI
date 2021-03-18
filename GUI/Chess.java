@@ -17,8 +17,8 @@ public class ChessGame extends Application {
         BorderPane pane = new BorderPane();
         pane.setPadding(new Insets(50,100,50,50));
         gui = new ChessGUI();
-        pane.setCenter(gui.boardPane);
-        pane.setRight(gui.gameHistoryPane);
+        pane.setCenter(gui.game.getBoardPane());
+        pane.setRight(gui.game.getGameHistoryPane());
         Scene scene = new Scene(pane);
 
         primaryStage.setTitle("Chess GUI");

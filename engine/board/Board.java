@@ -142,7 +142,6 @@ public class Board {
         builder.setPiece(new Knight(Alliance.BLACK,6));
         builder.setPiece(new Rook(Alliance.BLACK,7));
 
-
         builder.setPiece(new Rook(Alliance.WHITE,56));
         builder.setPiece(new Knight(Alliance.WHITE,57));
         builder.setPiece(new Bishop(Alliance.WHITE,58));
@@ -199,21 +198,7 @@ public class Board {
             this.enPassantPawn = movedPawn;
         }
 
-
     }
 
-
-    public static Board createBoardFromMoves(ArrayList<Move> moveList, int moveIndex) {
-
-        Board newChessBoard = Board.createStandardBoard();
-
-        for (int i = 0; i <= moveIndex; i++) {
-            MoveTransition transition = newChessBoard.currentPlayer().makeMove(moveList.get(i));
-            newChessBoard = transition.getTransitionBoard();
-        }
-
-        return newChessBoard;
-
-    }
 
 }

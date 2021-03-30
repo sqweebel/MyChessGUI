@@ -21,9 +21,9 @@ public class TilePane extends Pane {
    private static String defaultPieceImagesPath = "C:\\Users\\colin\\Documents\\BlackWidow-Chess-master\\art\\chess.com\\";
 
     final int tileId;
-    BoardPane boardPane;
+    GameDisplay.BoardPane boardPane;
 
-    TilePane(final int tileId, BoardPane boardPane) {
+    TilePane(final int tileId, GameDisplay.BoardPane boardPane) {
         this.tileId = tileId;
         this.boardPane = boardPane;
         setPrefSize(75,75);

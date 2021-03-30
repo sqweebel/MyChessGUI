@@ -1,5 +1,6 @@
 package com.chess.GUI;
 
+import com.chess.engine.Game;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
@@ -19,17 +20,16 @@ import java.util.List;
 
 public class ChessGUI {
 
-    public final BoardPane boardPane;
+    private Game game;
+    public GameDisplay gameDisplay;
     public GameHistoryPane gameHistoryPane;
 
     ChessGUI() {
 
-        this.boardPane = new BoardPane(this);
-        this.boardPane.drawBoard();
-        VBox vertical = new VBox();
-        this.gameHistoryPane = new GameHistoryPane(vertical, this);
-        this.gameHistoryPane.setMinSize(120, 500);
-        this.gameHistoryPane.setContent(vertical);
+        this.game = new Game();
+        this.gameDisplay = new GameDisplay(this.game);
+        this.gameDisplay.boardPane.drawBoard();
+
 
     }
 

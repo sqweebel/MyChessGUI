@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class ChessGame extends Application {
+public class Chess extends Application {
 
     private ChessGUI gui;
 
@@ -17,8 +17,7 @@ public class ChessGame extends Application {
         BorderPane pane = new BorderPane();
         pane.setPadding(new Insets(50,100,50,50));
         gui = new ChessGUI();
-        pane.setCenter(gui.game.getBoardPane());
-        pane.setRight(gui.game.getGameHistoryPane());
+        pane.setCenter(gui.gameDisplay);
         Scene scene = new Scene(pane);
 
         primaryStage.setTitle("Chess GUI");
